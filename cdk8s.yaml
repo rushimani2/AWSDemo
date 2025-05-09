@@ -2,3 +2,5 @@ language: go
 app: go run .
 imports:
   - k8s
+  - github:crossplane/crossplane@1.9.1
+  - crds/crossplane.yaml
