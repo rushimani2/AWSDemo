@@ -24,8 +24,5 @@ jobs:
       - name: Install CDK8s CLI
         run: npm install -g cdk8s-cli
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Run CDK8s Synth
         run: cdk8s synth
