@@ -1,0 +1,31 @@
+name: CDK8s Synth
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  synth:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install CDK8s CLI
+        run: npm install -g cdk8s-cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run CDK8s Synth
+        run: cdk8s synth
