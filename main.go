@@ -20,7 +20,7 @@ func NewSillyDemo(scope constructs.Construct, id string) cdk8s.Chart {
 		jsii.String("sql"),
 		&AppProps{
 			Image:         jsii.String("vfarcic/silly-demo"),
-			Replicas:      jsii.Number(7),
+			Replicas:      jsii.Number(20),
 			Port:          jsii.Number(8080),
 			ContainerPort: jsii.Number(8080),
 		},
