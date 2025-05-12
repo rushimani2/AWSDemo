@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   synth:
-    runs-on: self-hosted
+    runs-on: github-hosted
 
     steps:
       - name: Checkout code
